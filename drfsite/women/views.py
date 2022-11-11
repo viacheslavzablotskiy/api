@@ -63,8 +63,8 @@ class CommentList(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
 
 
-    # def perform_create(self, serializer):
-    #     serializer.save(author=self.request.user)
+     def perform_create(self, serializer):
+         serializer.save(author=self.request.user)
 
 
 class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
